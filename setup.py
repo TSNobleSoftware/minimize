@@ -11,7 +11,7 @@ with open(here.joinpath("requirements.txt"), encoding="utf-8") as f:
     requirements = f.readlines()
 
 setup(
-    name="minimize",
+    name="minimizepy",
     version=version,
     description="Reduce the size of MicroPython projects",
     long_description=long_description,
