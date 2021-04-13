@@ -1,0 +1,3 @@
+# Other dependencies for development work go here
+black
+flake8

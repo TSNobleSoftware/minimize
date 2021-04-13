@@ -1,0 +1,29 @@
+name: Release
+on: workflow_dispatch
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    environment: Release
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ZEST_PAT }}
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Install Zest
+        run: pip install zest.releaser[recommended]
+      - name: Set up Git user
+        run: |
+          git config --global user.name "ZestReleaser"
+          git config --global user.email "zestreleaser@outlook.com"
+      - name: Create release version
+        run: prerelease --no-input
+      - name: Tag and release to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_KEY }}
+          TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
+        run: release --no-input
+      - name: Bump version
+        run: postrelease --no-input
