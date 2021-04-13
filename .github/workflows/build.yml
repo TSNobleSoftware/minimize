@@ -18,31 +18,31 @@ jobs:
       - name: Run flake8
         run: |
           flake8 minimize/ test/
-  test:
-    name: Unit test
-    needs: lint
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: [3.8]
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install project dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements-test.txt
-      - name: Test with pytest
-        run: |
-          export AWS_DEFAULT_REGION=us-east-1
-          pytest --cov=minimize test/
-      - name: "Upload coverage to Codecov"
-        if: ${{ github.repository == 'TSNobleSoftware/minimize'}}
-        uses: codecov/codecov-action@v1
-        with:
-          fail_ci_if_error: true
-          flags: unittests
+#  test:
+#    name: Unit test
+#    needs: lint
+#    runs-on: ubuntu-latest
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        python-version: [3.8]
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Set up Python ${{ matrix.python-version }}
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: ${{ matrix.python-version }}
+#      - name: Install project dependencies
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install -r requirements-test.txt
+#      - name: Test with pytest
+#        run: |
+#          export AWS_DEFAULT_REGION=us-east-1
+#          pytest --cov=minimize test/
+#      - name: "Upload coverage to Codecov"
+#        if: ${{ github.repository == 'TSNobleSoftware/minimize'}}
+#        uses: codecov/codecov-action@v1
+#        with:
+#          fail_ci_if_error: true
+#          flags: unittests
