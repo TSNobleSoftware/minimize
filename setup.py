@@ -11,27 +11,28 @@ with open(here.joinpath("requirements.txt"), encoding="utf-8") as f:
     requirements = f.readlines()
 
 setup(
-    name="PACKAGE_NAME",
+    name="minimize",
     version=version,
-    description="A short description",
+    description="Reduce the size of MicroPython projects",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="Url to the repo",
-    author="NAME",
-    author_email="CONTACT",
+    url="https://github.com/TSNobleSoftware/minimize",
+    author="Tom Noble",
+    author_email="t.s.noble@outlook.com",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python :: 3",
-        "Any other classifiers..."
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: Implementation :: MicroPython",
     ],
-    keywords=["Relevant", "keywords", "go", "here"],
+    keywords=["python", "micropython", "cli"],
     packages=find_packages(),
-    python_requires="Supported versions e.g. >=3.5",
+    python_requires=">=3.8",
     install_requires=[requirements],
     project_urls={
-        "Bug Reports": "Url to issues section of the repo",
-        "Source": "Url to the repo",
+        "Bug Reports": "https://github.com/TSNobleSoftware/minimize/issues",
+        "Source": "https://github.com/TSNobleSoftware/minimize",
     }
 )

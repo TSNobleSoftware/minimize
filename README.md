@@ -1,33 +1,29 @@
-# PACKAGE_NAME
+# Minimize
 
-Short package description
-
-
-## Template steps
-
-1. Replace PACKAGE_NAME with the name of the package
-2. Replace PACKAGE_URL with the Github url of the package i.e. USER/PACKAGE_NAME
-3. Replace PACKAGE_SUPPORTED_VERSIONS with a list of supported Python versions
-4. Replace NAME and CONTACT with personal info
-5. Fill out placeholder information in setup.py
-6. Add requirements to the requirements files
-7. Add ZEST_PAT as an environment variable containing a personal access token for the Github Zest user
-8. Add PYPI_API key as an environment variable containing a PyPI API key to release the package
-8. Fill out this README and remove this section
-
+Minimize is a command line utility for optimizing the size of MicroPython projects, allowing you to write clean and
+readable code occupying minimal memory when deployed to micro-controller
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install PACKAGE_NAME.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install minimize.
 
 ```bash
-pip install PACKAGE_NAME
+pip install minimize
 ```
 
 ## Usage
 
-How to use the package, with some code examples
+Minimize provides a simple command-line utility which runs size reduction recursively over all files under the working directory
 
+```bash
+minimize
+```
+
+The command also accepts an arbitrary number of glob patterns, enabling fine-grained control over which files are minimized
+
+```bash
+minimize big-files/**.py huge-files/**.py
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
