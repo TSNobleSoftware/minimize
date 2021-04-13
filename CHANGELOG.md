@@ -1,4 +1,4 @@
-0.0.2 (unreleased)
+0.0.2 (2021-04-13)
 ------------------
 
 - Testing release process
