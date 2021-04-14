@@ -1,7 +1,9 @@
 0.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+### :hammer_and_wrench: Fixes
+
+- Fixed entry point for `minimize` cli command
 
 
 0.0.3 (2021-04-14)
