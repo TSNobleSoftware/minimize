@@ -18,7 +18,3 @@ def minimize(globs):
     print("-" * CLI_LINE_LENGTH)
     print("All done! \N{left-pointing magnifying glass}")
     print("=" * CLI_LINE_LENGTH)
-
-
-if __name__ == "__main__":
-    minimize()

@@ -29,7 +29,7 @@ setup(
     ],
     keywords=["python", "micropython", "cli"],
     packages=find_packages(),
-    entry_points={"console_scripts": ["minimize=minimize.cli:main"]},
+    entry_points={"console_scripts": ["minimize=minimize.cli:minimize"]},
     python_requires=">=3.8",
     install_requires=[requirements],
     project_urls={
