@@ -1,0 +1,1 @@
+CLI_LINE_LENGTH = 80
