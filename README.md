@@ -8,7 +8,7 @@ readable code occupying minimal memory when deployed to micro-controller
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install minimize.
 
 ```bash
-pip install minimize
+pip install python-minimize
 ```
 
 ## Usage
