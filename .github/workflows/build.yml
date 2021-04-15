@@ -13,11 +13,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
       - name: Run black
-        run: |
-          black --check minimize/ test/
+        run: black --check minimize/ test/
       - name: Run flake8
-        run: |
-          flake8 minimize/ test/
+        run: flake8 minimize/ test/
   test:
     name: Unit test
     needs: lint
@@ -37,8 +35,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-test.txt
       - name: Test with pytest
-        run:
-          pytest --cov=minimize test/
+        run: pytest --cov=minimize test/
       - name: "Upload coverage to Codecov"
         if: ${{ github.repository == 'TSNobleSoftware/minimize'}}
         uses: codecov/codecov-action@v1
