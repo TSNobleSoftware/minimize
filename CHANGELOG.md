@@ -1,7 +1,10 @@
 0.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+### :sparkles: Added
+
+- Added comment stripping functionality
+- Added redundant whitespace stripping functionality
 
 
 0.0.4 (2021-04-14)
