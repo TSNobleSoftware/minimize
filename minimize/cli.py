@@ -3,7 +3,11 @@ import os
 import click
 
 from minimize.util import get_py_files, file_processed_message
-from minimize.core import strip_comments, strip_extra_newlines, strip_trailing_whitespace
+from minimize.core import (
+    strip_comments,
+    strip_extra_newlines,
+    strip_trailing_whitespace,
+)
 from minimize.consts import CLI_LINE_LENGTH
 
 
@@ -26,7 +30,11 @@ def minimize(globs):
         with open(file, "wb") as source:
             source.write(bytes)
         size_after_bytes = os.path.getsize(file)
-        print(file_processed_message(file, size_before_bytes, size_after_bytes, CLI_LINE_LENGTH))
+        print(
+            file_processed_message(
+                file, size_before_bytes, size_after_bytes, CLI_LINE_LENGTH
+            )
+        )
     print("-" * CLI_LINE_LENGTH)
     print("All done! \N{left-pointing magnifying glass}")
     print("=" * CLI_LINE_LENGTH)

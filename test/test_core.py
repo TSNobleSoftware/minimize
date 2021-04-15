@@ -1,4 +1,8 @@
-from minimize.core import strip_comments, strip_extra_newlines, strip_trailing_whitespace
+from minimize.core import (
+    strip_comments,
+    strip_extra_newlines,
+    strip_trailing_whitespace,
+)
 
 
 def test_strip_comments():
