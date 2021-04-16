@@ -7,6 +7,8 @@ from minimize.core import (
     strip_comments,
     strip_extra_newlines,
     strip_trailing_whitespace,
+    strip_operator_whitespace,
+    replace_spaces_with_tabs,
 )
 from minimize.consts import CLI_LINE_LENGTH
 
@@ -27,6 +29,8 @@ def minimize(globs):
         bytes = strip_comments(bytes)
         bytes = strip_extra_newlines(bytes)
         bytes = strip_trailing_whitespace(bytes)
+        bytes = strip_operator_whitespace(bytes)
+        bytes = replace_spaces_with_tabs(bytes)
         with open(file, "wb") as source:
             source.write(bytes)
         size_after_bytes = os.path.getsize(file)

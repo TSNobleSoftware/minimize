@@ -1,4 +1,7 @@
 import glob
+import itertools
+import string
+import math
 
 
 def unique(_list):
@@ -24,3 +27,9 @@ def get_percent_reduced(original, reduced):
     except ZeroDivisionError:
         percent_reduced = 0
     return percent_reduced
+
+
+def unique_symbol_generator():
+    letters = string.ascii_lowercase + string.ascii_uppercase
+    for index in itertools.count():
+        yield f"{'_' * math.floor(index / 52)}{letters[index % 52]}"

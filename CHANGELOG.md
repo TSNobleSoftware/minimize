@@ -4,7 +4,9 @@
 ### :sparkles: Added
 
 - Added comment stripping functionality
-- Added redundant whitespace stripping functionality
+- Added trailing whitespace stripping functionality
+- Added operator whitespace stripping functionality
+- Added space to tab replacing functionality
 
 
 0.0.4 (2021-04-14)
