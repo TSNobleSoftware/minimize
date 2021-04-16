@@ -5,7 +5,7 @@ from minimize.core import (
     strip_extra_newlines,
     strip_trailing_whitespace,
     strip_operator_whitespace,
-    replace_spaces_with_tabs
+    replace_spaces_with_tabs,
 )
 
 
@@ -26,9 +26,28 @@ def test_strip_trailing_whitespace():
 @pytest.mark.parametrize(
     "op",
     [
-        "+", "-", "*", "/", "%", ",", "(", ")", "[", "]", "{", "}", "=", ":", "+=",
-        "-=", "*=", "/=", "%=", "==", "**"
-    ]
+        "+",
+        "-",
+        "*",
+        "/",
+        "%",
+        ",",
+        "(",
+        ")",
+        "[",
+        "]",
+        "{",
+        "}",
+        "=",
+        ":",
+        "+=",
+        "-=",
+        "*=",
+        "/=",
+        "%=",
+        "==",
+        "**",
+    ],
 )
 def test_strip_operator_whitespace(op):
     assert strip_operator_whitespace(f" {op} ".encode()) == op.encode()

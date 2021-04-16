@@ -8,7 +8,7 @@ from minimize.core import (
     strip_extra_newlines,
     strip_trailing_whitespace,
     strip_operator_whitespace,
-    replace_spaces_with_tabs
+    replace_spaces_with_tabs,
 )
 from minimize.consts import CLI_LINE_LENGTH
 
