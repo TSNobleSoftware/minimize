@@ -1,6 +1,4 @@
 import re
-import tokenize
-from io import BytesIO
 
 
 def strip_comments(bytes):
