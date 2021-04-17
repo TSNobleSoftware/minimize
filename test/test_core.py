@@ -40,6 +40,11 @@ def test_strip_trailing_whitespace():
         "}",
         "=",
         ":",
+        ">",
+        "<",
+        "&",
+        "|",
+        "~",
         "+=",
         "-=",
         "*=",
@@ -47,6 +52,13 @@ def test_strip_trailing_whitespace():
         "%=",
         "==",
         "**",
+        "//",
+        "!=",
+        "<>",
+        ">=",
+        "<=",
+        ">>",
+        "<<"
     ],
 )
 def test_strip_operator_whitespace(op):
